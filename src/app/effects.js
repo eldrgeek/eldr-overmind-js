@@ -2,12 +2,13 @@ import page from 'page';
 
 export const storage = {
   saveTodos(todos) {
-    console;
+    // console.log('saved');
     localStorage.setItem('todos', JSON.stringify(todos));
   },
   getTodos() {
-    console.log('gotten');
-    return {}; //JSON.parse(localStorage.getItem('todos') || '{}');
+    // console.log('gotten');
+    // return {};
+    return JSON.parse(localStorage.getItem('todos') || '{}');
   },
 };
 

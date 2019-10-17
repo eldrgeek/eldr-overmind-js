@@ -19,4 +19,4 @@ const TodoInput = () => {
 
 export default TodoInput;
 
-// CurrentModule(TodoInput);
+CurrentModule(TodoInput);

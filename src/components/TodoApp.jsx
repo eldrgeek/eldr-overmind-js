@@ -9,7 +9,7 @@ const TodoApp = () => {
   return (
     <div>
       <header className="header">
-        <h1>todos!</h1>
+        <h1>todos</h1>
         <TodoInput />
       </header>
       <section className="main">
@@ -29,4 +29,4 @@ const TodoApp = () => {
 };
 
 export default TodoApp;
-// CurrentModule(TodoApp);
+CurrentModule(TodoApp);

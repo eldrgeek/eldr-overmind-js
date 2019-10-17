@@ -4,6 +4,7 @@ import classNames from 'classnames';
 const TodoItem = ({ todo, isEditing }) => {
   const { state, actions } = useApp();
   if (!todo) todo = state.todos[Object.keys(state.todos)[0]];
+  if (!todo) return <div>No todos</div>;
   isEditing = state.editingTodoId === todo.id;
   return (
     <div className={'todo-list'}>
@@ -52,4 +53,4 @@ const TodoItem = ({ todo, isEditing }) => {
 
 export default TodoItem;
 
-// CurrentModule(TodoItem);s
+CurrentModule(TodoItem);
