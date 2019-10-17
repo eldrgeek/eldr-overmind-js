@@ -4,7 +4,7 @@ export const changeNewTodoTitle = ({ state }, title) => {
 
 export const addTodo = ({ state, effects }) => {
   const id = effects.ids.create();
-
+  // console.log('add');
   state.todos[id] = {
     id,
     title: state.newTodoTitle,
