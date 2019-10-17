@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { useApp } from '../app';
 import { pluralize } from '../utils';
-import { Provider } from 'overmind-react';
+import CurrentModule from '../CurrentModule';
 import { app } from '../app';
 import { render } from 'react-dom';
 const TodoFooter = () => {
@@ -52,12 +52,5 @@ const TodoFooter = () => {
   );
 };
 
-const rootElement = document.getElementById('root');
-
-render(
-  <Provider value={app}>
-    <TodoFooter />
-  </Provider>,
-  rootElement
-);
 export default TodoFooter;
+CurrentModule(TodoFooter);
