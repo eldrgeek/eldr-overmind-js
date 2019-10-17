@@ -1,11 +1,10 @@
-import React from 'react';
+import { CurrentModule, React, useApp } from '../CurrentModule';
+
 import classNames from 'classnames';
-import { useApp } from '../app';
-import CurrentModule from '../CurrentModule';
 const TodoItem = ({ todo, isEditing }) => {
   const { state, actions } = useApp();
   if (!todo) todo = state.todos[Object.keys(state.todos)[0]];
-
+  isEditing = state.editingTodoId === todo.id;
   return (
     <div className={'todo-list'}>
       <li

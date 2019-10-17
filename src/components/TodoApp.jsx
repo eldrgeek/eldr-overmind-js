@@ -1,13 +1,9 @@
-import React from 'react';
-import { useApp } from '../app';
-
+import { CurrentModule, React, useApp } from '../CurrentModule';
 import TodoList from './TodoList';
 import TodoInput from './TodoInput';
 import TodoFooter from './TodoFooter';
-import { Provider } from 'overmind-react';
-import { app } from '../app';
-import { render } from 'react-dom';
-const BasicTodoApp = () => {
+
+const TodoApp = () => {
   const { state, actions } = useApp();
 
   return (
@@ -32,21 +28,5 @@ const BasicTodoApp = () => {
   );
 };
 
-const TodoApp = () => {
-  <Provider value={app}>
-    <BasicTodoApp />
-  </Provider>;
-};
-const rootElement = document.getElementById('root');
-
-render(
-  <Provider value={app}>
-    <BasicTodoApp />
-  </Provider>,
-  rootElement
-);
-
-let exportedApp;
-exportedApp = BasicTodoApp;
-
-export default exportedApp;
+export default TodoApp;
+CurrentModule(TodoApp);

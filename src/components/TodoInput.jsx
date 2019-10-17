@@ -1,6 +1,5 @@
-import React from 'react';
-import { useApp } from '../app';
-import CurrentModule from '../CurrentModule';
+import { CurrentModule, React, useApp } from '../CurrentModule';
+
 const TodoInput = () => {
   const { state, actions } = useApp();
   return (

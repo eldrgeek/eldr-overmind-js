@@ -1,10 +1,6 @@
-import React from 'react';
+import { CurrentModule, React, useApp } from '../CurrentModule';
 import classNames from 'classnames';
-import { useApp } from '../app';
 import { pluralize } from '../utils';
-import CurrentModule from '../CurrentModule';
-import { app } from '../app';
-import { render } from 'react-dom';
 const TodoFooter = () => {
   const { state, actions } = useApp();
 
