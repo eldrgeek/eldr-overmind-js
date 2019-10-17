@@ -15,19 +15,25 @@ const config = {
   effects,
 };
 
-if (module.hot) {
-  module.hot.dispose(data => {
-    data.app = app;
-    data.useApp = useApp;
+const initialize = () => {
+  app = createOvermind(config, {
+    devtools: 'localhost:8080',
   });
+  useApp = createHook();
+};
 
-  if (!module.hot.data) {
-    app = createOvermind(config, {
-      devtools: 'localhost:8080',
-    });
-    useApp = createHook();
-  } else {
-    app = module.hot.data.app;
-    useApp = module.hot.data.useApp;
-  }
-}
+// if (!module.hot) {
+initialize();
+// } else {}
+//   module.hot.dispose(data => {
+//     data.app = app;
+//     data.useApp = useApp;
+//   });
+
+//   if (!module.hot.data) {
+//     initialize()
+//   } else {
+//     app = module.hot.data.app;
+//     useApp = module.hot.data.useApp;
+//   }
+// }

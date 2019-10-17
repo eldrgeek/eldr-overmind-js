@@ -49,4 +49,4 @@ const TodoFooter = () => {
 };
 
 export default TodoFooter;
-CurrentModule(TodoFooter);
+// CurrentModule(TodoFooter);

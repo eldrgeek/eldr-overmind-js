@@ -2,10 +2,12 @@ import page from 'page';
 
 export const storage = {
   saveTodos(todos) {
+    console;
     localStorage.setItem('todos', JSON.stringify(todos));
   },
   getTodos() {
-    return JSON.parse(localStorage.getItem('todos') || '{}');
+    console.log('gotten');
+    return {}; //JSON.parse(localStorage.getItem('todos') || '{}');
   },
 };
 
