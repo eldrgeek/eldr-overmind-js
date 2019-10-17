@@ -1,8 +1,9 @@
 import React from 'react';
 import classNames from 'classnames';
 import { useApp } from '../app';
-
+import CurrentModule from '../CurrentModule';
 const TodoItem = ({ todo, isEditing }) => {
+  if (!todo) todo = { completed: true, title: 'this title' };
   const { state, actions } = useApp();
 
   return (
@@ -49,3 +50,5 @@ const TodoItem = ({ todo, isEditing }) => {
 };
 
 export default TodoItem;
+
+CurrentModule(TodoItem);

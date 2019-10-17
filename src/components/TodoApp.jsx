@@ -3,8 +3,10 @@ import { useApp } from '../app';
 
 import TodoItem from './TodoItem';
 import TodoFooter from './TodoFooter';
-
-const TodoApp = () => {
+import { Provider } from 'overmind-react';
+import { app } from '../app';
+import { render } from 'react-dom';
+const BasicTodoApp = () => {
   const { state, actions } = useApp();
 
   return (
@@ -51,4 +53,21 @@ const TodoApp = () => {
   );
 };
 
-export default TodoApp;
+const TodoApp = () => {
+  <Provider value={app}>
+    <BasicTodoApp />
+  </Provider>;
+};
+const rootElement = document.getElementById('root');
+
+render(
+  <Provider value={app}>
+    <BasicTodoApp />
+  </Provider>,
+  rootElement
+);
+
+let exportedApp;
+exportedApp = BasicTodoApp;
+
+export default exportedApp;
