@@ -53,4 +53,4 @@ const TodoItem = ({ todo, isEditing }) => {
 
 export default TodoItem;
 
-CurrentModule(TodoItem);
+// CurrentModule(TodoItem);

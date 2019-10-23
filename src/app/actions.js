@@ -1,10 +1,11 @@
+console.log('loading actions');
 export const changeNewTodoTitle = ({ state }, title) => {
   state.newTodoTitle = title;
 };
 
 export const addTodo = ({ state, effects }) => {
   const id = effects.ids.create();
-  // console.log('add');
+  console.log('additional');
   state.todos[id] = {
     id,
     title: state.newTodoTitle,
@@ -12,7 +13,8 @@ export const addTodo = ({ state, effects }) => {
   };
 
   state.newTodoTitle = '';
-
+  // console.log('calling');
+  // effects.storage.saveTodos(state.todos);
   if (state.filter === 'completed') {
     effects.router.goTo('/active');
   }

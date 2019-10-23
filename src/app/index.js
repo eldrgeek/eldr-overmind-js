@@ -7,7 +7,7 @@ import { createOvermind } from 'overmind';
 
 export let useApp;
 export let app;
-
+console.log('loading index');
 const config = {
   onInitialize,
   state,
@@ -16,9 +16,12 @@ const config = {
 };
 
 const initialize = () => {
+  console.log('running iniializer');
+  // debugger;
   app = createOvermind(config, {
     devtools: 'localhost:8080',
   });
+
   useApp = createHook();
 };
 

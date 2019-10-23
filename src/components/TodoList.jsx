@@ -13,4 +13,4 @@ const TodoList = () => {
 
 export default TodoList;
 
-CurrentModule(TodoList);
+// CurrentModule(TodoList);

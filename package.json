@@ -1,11 +1,11 @@
 {
-  "name": "overmind-todomvc-split",
+  "name": "overmind-todomvc-hot",
   "version": "0.1.0",
   "private": true,
   "main": "src/index.tsx",
   "dependencies": {
     "classnames": "2.2.6",
-    "overmind": "19.1.1",
+    "overmind": "20.0.0",
     "overmind-react": "21.0.0",
     "page": "1.11.5",
     "react": "16.10.2",

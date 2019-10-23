@@ -1,14 +1,21 @@
 import page from 'page';
-
+console.log('loading effects!');
 export const storage = {
   saveTodos(todos) {
-    // console.log('saved');
+    console.log('saving effect', todos);
+
     localStorage.setItem('todos', JSON.stringify(todos));
   },
   getTodos() {
-    // console.log('gotten');
-    // return {};
-    return JSON.parse(localStorage.getItem('todos') || '{}');
+    console.log('gotten');
+    let saved = localStorage.getItem('todos');
+    try {
+      return JSON.parse(saved || '{}');
+    } catch (e) {
+      console.log(saved);
+      console.log(e);
+      return {};
+    }
   },
 };
 
