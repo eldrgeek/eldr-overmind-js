@@ -42,7 +42,7 @@ const TodoApp = () => {
       {count}
       <section className="todoapp">
         <header className="header">
-          <h1>frictionless</h1>
+          <h1>demo version</h1>
           <TodoInput />
         </header>
         <section className="main">
