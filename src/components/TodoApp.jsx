@@ -38,11 +38,9 @@ const TodoApp = () => {
   const upCount = () => setCount(count + 1);
   return (
     <React.Fragment>
-      <button onClick={upCount}>Click</button>
-      {count}
       <section className="todoapp">
         <header className="header">
-          <h1>demo version</h1>
+          <h1>Overmindo</h1>
           <TodoInput />
         </header>
         <section className="main">
@@ -64,4 +62,4 @@ const TodoApp = () => {
 };
 
 export default TodoApp;
-// CurrentModule(TodoApp);
+CurrentModule(TodoApp);
