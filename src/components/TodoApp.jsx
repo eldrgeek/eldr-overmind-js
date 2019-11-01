@@ -2,7 +2,7 @@ import { CurrentModule, React, useApp } from '../CurrentModule';
 import TodoList from './TodoList';
 import TodoInput from './TodoInput';
 import TodoFooter from './TodoFooter';
-import Attribution from './Attribution';
+import Attribution from './ZAttribution';
 const TodoApp = () => {
   const { state, actions } = useApp();
 
