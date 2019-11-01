@@ -1,4 +1,4 @@
-import { CurrentModule, React, useApp } from '../CurrentModule';
+import { CurrentModule, React } from '../CurrentModule';
 const Attribution = () => {
   return (
     <footer className="info">
