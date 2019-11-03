@@ -1,12 +1,6 @@
 export const onInitialize = ({ state, actions, effects }, instance) => {
   state.todos = effects.storage.getTodos();
   // console.log('on initializw');
-  instance.reaction(
-    ({ todos }) => todos,
-    //Fix bug passing todos
-    todos => effects.storage.saveTodos(todos),
-    { nested: true }
-  );
 
   effects.router.initialize({
     '/': () => actions.changeFilter('all'),

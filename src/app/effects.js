@@ -2,7 +2,7 @@ import page from 'page';
 // console.log('loading effects!');
 export const storage = {
   saveTodos(todos) {
-    console.log('saving effect', Object.keys(todos).length);
+    // console.log('saving effect', Object.keys(todos).length);
     localStorage.setItem('todos', JSON.stringify(todos));
   },
   getTodos() {
