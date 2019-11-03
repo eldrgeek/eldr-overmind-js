@@ -1,13 +1,12 @@
 import page from 'page';
-console.log('loading effects!');
+// console.log('loading effects!');
 export const storage = {
   saveTodos(todos) {
-    console.log('saving effect', todos);
-
+    console.log('saving effect', Object.keys(todos).length);
     localStorage.setItem('todos', JSON.stringify(todos));
   },
   getTodos() {
-    console.log('gotten');
+    // console.log('gotten');
     let saved = localStorage.getItem('todos');
     try {
       return JSON.parse(saved || '{}');
