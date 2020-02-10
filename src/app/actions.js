@@ -13,8 +13,7 @@ export const addTodo = ({ state, effects }) => {
   };
 
   state.newTodoTitle = '';
-  // console.log('calling');
-  // effects.storage.saveTodos(state.todos);
+
   if (state.filter === 'completed') {
     effects.router.goTo('/active');
   }

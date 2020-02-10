@@ -3,7 +3,7 @@ import { state } from './state';
 import { onInitialize } from './onInitialize';
 import * as actions from './actions';
 import * as effects from './effects';
-import { createOvermind } from 'overmind';
+import { createOvermind, json } from 'overmind';
 
 export let useApp;
 export let app;
@@ -15,12 +15,15 @@ const config = {
   effects,
 };
 
+
+
 const initialize = () => {
   // console.log('running iniializer');
   // debugger;
   app = createOvermind(config, {
     devtools: 'localhost:8080',
   });
+
   if (app.dispose) app.dispose();
   app.dispose = app.reaction(
     ({ todos }) => todos,

@@ -1,4 +1,9 @@
 export const state = {
+  devState: {
+    stateAttributes: 'filter,newTodoTitle,editingTodoId,editingTodoNewTitle',
+    restoreState: false,
+    saveState: true,
+  },
   filter: 'all',
   newTodoTitle: '',
   todos: {},

@@ -5,12 +5,12 @@
   "main": "src/index.tsx",
   "dependencies": {
     "classnames": "2.2.6",
-    "overmind": "20.0.0",
-    "overmind-react": "21.0.0",
+    "overmind": "22.0.3",
+    "overmind-react": "23.0.3",
     "page": "1.11.5",
-    "react": "16.10.2",
-    "react-dom": "16.10.2",
-    "react-scripts": "3.2.0",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "react-scripts": "3.3.1",
     "todomvc-app-css": "^2.2.0",
     "todomvc-common": "^1.0.5",
     "tslib": "1.10.0"
